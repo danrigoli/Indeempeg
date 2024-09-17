@@ -417,7 +417,7 @@ static void write_codec_attr(AVStream *st, VariantStream *vs)
         if (st->codecpar->codec_tag == MKTAG('h','v','c','1') &&
             profile != AV_PROFILE_UNKNOWN &&
             level != AV_LEVEL_UNKNOWN) {
-            snprintf(attr, sizeof(attr), "%s.%d.4.L%d.B01", av_fourcc2str(st->codecpar->codec_tag), profile, level);
+            snprintf(attr, sizeof(attr), "%s.%d.4.L%d.B0", av_fourcc2str(st->codecpar->codec_tag), profile, level);
         } else
             goto fail;
     } else if (st->codecpar->codec_id == AV_CODEC_ID_MP2) {
